@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.calc {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  align-content: center;
+  justify-content: center;
+}
+
+.calc > button {
+  border-radius: 5px;
+  outline: none;
+}
+
+button.span-two {
+  grid-column: span 2;
+}
+
+.display-wrap {
+  grid-column: 1 / -1;
+}
