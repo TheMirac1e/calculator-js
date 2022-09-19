@@ -8,6 +8,7 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
+  background-color: #333333;
 }
 
 .container {
@@ -28,10 +29,17 @@ body {
 }
 
 .calc > button {
+  background-color: #5c5a5a;
+  color: #fff;
+  font-size: 2rem;
   border-radius: 5px;
   outline: none;
+  margin:1px;
 }
 
+.calc > button:hover {
+  opacity: 0.8;
+}
 button.span-two {
   grid-column: span 2;
 }
