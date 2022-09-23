@@ -46,4 +46,17 @@ button.span-two {
 
 .display-wrap {
   grid-column: 1 / -1;
+  color: white;
+  align-items: flex-end;
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: column;
+}
+
+.current-operand {
+  font-size: 3rem;
+}
+
+.previous-operand {
+  font-size: 1.8rem;
 }
