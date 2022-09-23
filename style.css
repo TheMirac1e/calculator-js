@@ -32,9 +32,9 @@ body {
   background-color: #5c5a5a;
   color: #fff;
   font-size: 2rem;
-  border-radius: 5px;
   outline: none;
   margin:1px;
+  transition: all 0.5s ease;
 }
 
 .calc > button:hover {
@@ -51,12 +51,19 @@ button.span-two {
   justify-content: flex-end;
   display: flex;
   flex-direction: column;
+  transition: all 1ms ease-in;
+  background-color: #1c1c1c;
+  text-align: right;
+  padding: 10px;
 }
 
 .current-operand {
   font-size: 3rem;
+  min-height: 55px;
+  word-break: break-all;
 }
 
 .previous-operand {
   font-size: 1.8rem;
+  color: #efefef;
 }
