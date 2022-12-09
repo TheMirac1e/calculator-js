@@ -6,8 +6,8 @@ class Calculator {
     }
 
     clear() {
-        this.currentOperand = '';
-        this.previousOperand = '';
+        this.currentOperand = '0';
+        this.previousOperand = '0';
         this.operation = null;
     }
 
@@ -24,7 +24,7 @@ class Calculator {
         let computation;
         const prev = parseFloat(this.previousOperand);
         const current = parseFloat(this.currentOperand);
-        if(isNaN(prev) || isNaN(current)) return;
+        if (isNaN(prev) || isNaN(current)) return;
 
         switch (this.operation) {
             case '+':
@@ -47,12 +47,13 @@ class Calculator {
         this.previousOperand = '';
     }
 
-   appendOperation(operation) {
-        if(this.currentOperand === '') return;
+    appendOperation(operation) {
+        if (this.currentOperand === '') return;
 
-        if(this.previousOperand !== '') {
+        if (this.previousOperand !== '') {
             this.compute();
         }
+
         this.operation = operation;
         this.previousOperand = this.currentOperand;
         this.currentOperand = '';
@@ -66,7 +67,7 @@ class Calculator {
         if (isNaN(integerDigits)) {
             integerDisplay = ''
         } else {
-            integerDisplay = integerDigits.toLocaleString('en', { maximumFractionDigits: 0 })
+            integerDisplay = integerDigits.toLocaleString('en', {maximumFractionDigits: 0})
         }
         if (decimalDigits != null) {
             return `${integerDisplay}.${decimalDigits}`
